@@ -44,3 +44,11 @@ $ip='TimeStemp: ' . $date . ' - ' . 'User Browser: ' . $user_browser . ' - ' . '
 
 
 $myFile = "IP Logs.txt";
+$fh = fopen($myFile, 'a') or die("can't open file");
+$stringData = "$ip\n";
+fwrite($fh, $stringData);
+fclose($fh);
+
+
+header( 'Location: https://www.google.com/' ) ;
+?>
